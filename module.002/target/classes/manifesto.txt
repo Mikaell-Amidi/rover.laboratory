@@ -1,0 +1,26 @@
+Zookeeper broker
+./bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Kafka broker
+./bin/kafka-server-start.sh config/server.properties
+
+Consumer
+./bin/kafka-console-consumer.sh --topic notification --from-beginning --bootstrap-server localhost:9092
+
+Consumer with header
+./bin/kafka-console-consumer.sh --topic sam.mks.version --from-beginning --bootstrap-server localhost:9092 --property print.headers=true
+
+Create Topic
+./bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+
+Producing On Topic
+./bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+
+Producing On Topic with key
+./bin/kafka-console-producer.sh --topic notification --property "parse.key=true" --property "key.separator=:" --bootstrap-server localhost:9092
+
+List Of Topics
+./bin/kafka-topics.sh --list -bootstrap-server localhost:9092
+
+Customized consumer
+./bin/kafka-console-consumer.sh --topic sam.mks.version --from-beginning --bootstrap-server uat-elfi.servicebus.windows.net:9093 --consumer.config /Users/mikael/Lunar/kafka_2.13-3.1.0/config/secure.properties --property print.key=tru

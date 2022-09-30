@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="module.002" />
+        <module name="module.003" />
+        <module name="module.004" />
+        <module name="module.005" />
+        <module name="module.006" />
+        <module name="module.001" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="module.001" options="--enable-preview" />
+      <module name="module.002" options="" />
+      <module name="module.003" options="" />
+      <module name="module.004" options="--enable-preview" />
+      <module name="module.005" options="--enable-preview" />
+      <module name="module.006" options="--enable-preview" />
+      <module name="rover.laboratory" options="" />
+    </option>
+  </component>
+</project>
