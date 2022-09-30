@@ -28,7 +28,6 @@ public class RestClient implements Callable<String> {
     }
 
     private String networkCall(int seconds) throws Exception {
-
         Thread.sleep(Duration.ofSeconds(seconds));
         return "successful in " + seconds;
     }
